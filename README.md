@@ -14,7 +14,7 @@ Once those are installed:
 
 This configuration includes the following plugins:
 
-* ICU Analysis: https://github.com/elasticsearch/elasticsearch-analysis-icu
-* Head: https://github.com/mobz/elasticsearch-head
-* Kopf: https://github.com/lmenezes/elasticsearch-kopf
 * Bigdesk: http://bigdesk.org/
+* Head: https://github.com/mobz/elasticsearch-head
+* ICU Analysis: https://github.com/elasticsearch/elasticsearch-analysis-icu
+* Kopf: https://github.com/lmenezes/elasticsearch-kopf
