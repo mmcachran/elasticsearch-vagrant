@@ -20,11 +20,16 @@ update-rc.d elasticsearch defaults 95 10
 # Holds ES plugins we want to install.
 ES_PLUGINS=()
 
-# ES plugins to install.
+# Internal Plugins.
+ES_PLUGINS+=(com.github.kzwang/elasticsearch-image/1.2.0)
+ES_PLUGINS+=(elasticsearch/elasticsearch-mapper-attachments/2.4.2)
+
+# Supervision/Dashboard ES plugins.
 ES_PLUGINS+=(mobz/elasticsearch-head)
 ES_PLUGINS+=(lukas-vlcek/bigdesk)
 ES_PLUGINS+=(elasticsearch/elasticsearch-analysis-icu/2.4.1)
 ES_PLUGINS+=(lmenezes/elasticsearch-kopf)
+ES_PLUGINS+=(royrusso/elasticsearch-HQ)
 
 # Loop through and install ES plugins.
 for P in ${ESPLUGINS[*]}

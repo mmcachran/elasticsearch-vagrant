@@ -15,6 +15,9 @@ Once those are installed:
 This configuration includes the following plugins:
 
 * Bigdesk: http://bigdesk.org/
-* Head: https://github.com/mobz/elasticsearch-head
+* HQ: http://www.elastichq.org/
+* HEAD: https://github.com/mobz/elasticsearch-head
+* Image: https://github.com/kzwang/elasticsearch-image
+* Mapper Attachments: https://github.com/elasticsearch/elasticsearch-mapper-attachments
 * ICU Analysis: https://github.com/elasticsearch/elasticsearch-analysis-icu
 * Kopf: https://github.com/lmenezes/elasticsearch-kopf
