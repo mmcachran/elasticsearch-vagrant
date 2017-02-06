@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Install TMUX and start a new TMUX session.
-apt-get install tmux
-tmux new -s elastic
-
 # Setting ES version to install.
 ES_VERSION="2.4.1"
 ES_PLUGIN_INSTALL_CMD="/usr/share/elasticsearch/bin/plugin install "
@@ -11,6 +7,9 @@ apt-get -yq update
 apt-get -yq install git openjdk-7-jre-headless service-wrapper curl
 
 update-alternatives --set java /usr/lib/jvm/java-7-openjdk-i386/jre/bin/java
+
+# Install TMUX.
+apt-get install tmux
 
 # Install VIM.
 apt-get install vim
