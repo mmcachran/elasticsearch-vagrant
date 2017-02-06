@@ -25,3 +25,6 @@ script.inline: on
 script.indexed: on
 script.engine.groovy.inline.search: on
 # script.disable_dynamic: false
+
+marvel.agent.enabled: true
+marvel.agent.exporter.es.hosts: ["10.0.0.11:9200"]
