@@ -1,6 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+require 'erb'
+require_relative 'lib/inline-script.rb'
+
 Vagrant.configure("2") do |config|
 
 	config.vm.box = "precise32"
@@ -15,5 +18,8 @@ Vagrant.configure("2") do |config|
 
 	# Run the ES setup script.
 	config.vm.provision :shell, :path => "lib/es-setup.sh"
+
+	# Run the inline scripts.
+	config.vm.provision 'shell', inline: @node_start_inline_script
 
 end

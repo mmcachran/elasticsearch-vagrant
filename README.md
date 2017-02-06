@@ -1,4 +1,4 @@
-# Elasticsearch Vagrant Box
+# ElasticSearch Vagrant Box
 
 Requirements:
 
