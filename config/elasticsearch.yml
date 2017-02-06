@@ -1,0 +1,27 @@
+### Elasticsearch configuration
+
+# For information on supported formats and syntax for the config file, see
+# <http://elasticsearch.org/guide/en/elasticsearch/reference/current/setup-configuration.html>
+
+# Allow querying this server via Javascript from a browser; this has significant
+# security implications.
+# @see http://www.elasticsearch.org/downloads/1-4-0-beta1/
+# @see https://github.com/elasticsearch/elasticsearch/issues/7151
+# @see http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-http.html
+http.cors.enabled: true
+http.cors.allow-methods: GET, POST
+
+# Set the address other nodes will use to communicate with this node. If not
+# set, it is automatically derived. It must point to an actual IP address.
+#
+# network.publish_host: 192.168.0.1
+
+# Set both 'bind_host' and 'publish_host':
+network.host: 0.0.0.0
+http.port: 9200
+
+# Enable dynamic scripting.
+script.inline: on
+script.indexed: on
+script.engine.groovy.inline.search: on
+# script.disable_dynamic: false
