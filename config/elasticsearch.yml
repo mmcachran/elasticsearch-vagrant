@@ -26,5 +26,54 @@ script.indexed: on
 script.engine.groovy.inline.search: on
 # script.disable_dynamic: false
 
+# Marvel config.
 marvel.agent.enabled: true
 marvel.agent.exporter.es.hosts: ["10.0.0.11:9200"]
+
+#################################### Index ####################################
+
+# You can set a number of options (such as shard/replica options, mapping
+# or analyzer definitions, translog settings, ...) for indices globally,
+# in this file.
+#
+# Note, that it makes more sense to configure index settings specifically for
+# a certain index, either when creating it or by using the index templates API.
+#
+# See <http://elasticsearch.org/guide/en/elasticsearch/reference/current/index-modules.html> and
+# <http://elasticsearch.org/guide/en/elasticsearch/reference/current/indices-create-index.html>
+# for more information.
+
+# Set the number of shards (splits) of an index (5 by default):
+#
+index.number_of_shards: 5
+
+# Set the number of replicas (additional copies) of an index (1 by default):
+#
+index.number_of_replicas: 2
+
+# Note, that for development on a local machine, with small indices, it usually
+# makes sense to "disable" the distributed features:
+#
+# index.number_of_shards: 1
+# index.number_of_replicas: 0
+
+# These settings directly affect the performance of index and search operations
+# in your cluster. Assuming you have enough machines to hold shards and
+# replicas, the rule of thumb is:
+#
+# 1. Having more *shards* enhances the _indexing_ performance and allows to
+#    _distribute_ a big index across machines.
+# 2. Having more *replicas* enhances the _search_ performance and improves the
+#    cluster _availability_.
+#
+# The "number_of_shards" is a one-time setting for an index.
+#
+# The "number_of_replicas" can be increased or decreased anytime,
+# by using the Index Update Settings API.
+#
+# Elasticsearch takes care about load balancing, relocating, gathering the
+# results from nodes, etc. Experiment with different settings to fine-tune
+# your setup.
+
+# Use the Index Status API (<http://localhost:9200/A/_status>) to inspect
+# the index status.
