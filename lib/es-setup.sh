@@ -8,14 +8,8 @@ apt-get -yq install git openjdk-7-jre-headless service-wrapper curl
 
 update-alternatives --set java /usr/lib/jvm/java-7-openjdk-i386/jre/bin/java
 
-# Install TMUX.
-apt-get install tmux
-
-# Install VIM.
-apt-get install vim
-
-# Install HTOP.
-apt-get install htop
+# Install tmux, vim, zsh, git, htop.
+apt-get -y install tmux vim zsh git-core htop
 
 # Install ElasticSearch.
 wget -nv https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/$ES_VERSION/elasticsearch-$ES_VERSION.deb
