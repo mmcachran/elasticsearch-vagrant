@@ -7,7 +7,7 @@ Requirements:
 
 Once those are installed:
 * Clone this repository
-* In your terminal, type `vagrant up` in the root of this repository
+* `vagrant up` in the root of this repository
 * Visit `http://10.0.0.11:9200` in your browser
 
 ## Included plugins
