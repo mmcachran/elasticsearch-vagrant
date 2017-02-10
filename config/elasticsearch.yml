@@ -8,8 +8,8 @@
 # @see http://www.elasticsearch.org/downloads/1-4-0-beta1/
 # @see https://github.com/elasticsearch/elasticsearch/issues/7151
 # @see http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/modules-http.html
-http.cors.enabled: true
-http.cors.allow-methods: GET, POST
+#http.cors.enabled: true
+#http.cors.allow-methods: GET, POST
 
 # Enable dynamic scripting.
 script.inline: on
