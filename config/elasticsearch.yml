@@ -20,18 +20,18 @@ script.engine.groovy.inline.search: on
 # Node names are generated dynamically on startup, so you're relieved
 # from configuring them manually. You can tie this node to a specific name:
 #
-node.name: "thor"
+# node.name: "thor"
 
 # Every node can be configured to allow or deny being eligible as the master,
 # and to allow or deny to store the data.
 #
 # Allow this node to be eligible as a master node (enabled by default):
 #
-node.master: true
+# node.master: true
 #
 # Allow this node to store data (enabled by default):
 #
-node.data: true
+# node.data: true
 
 # Set the address other nodes will use to communicate with this node. If not
 # set, it is automatically derived. It must point to an actual IP address.
