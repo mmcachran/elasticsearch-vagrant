@@ -3,13 +3,13 @@
 ES_VERSION="2.4.1"
 ES_PLUGIN_INSTALL_CMD="/usr/share/elasticsearch/bin/plugin install "
 
-apt-get -yq update
-apt-get -yq install git openjdk-7-jre-headless service-wrapper curl
+apt-get -y update
+apt-get -y install git openjdk-7-jre-headless service-wrapper curl
 
 update-alternatives --set java /usr/lib/jvm/java-7-openjdk-i386/jre/bin/java
 
 # Install tmux, vim, zsh, git, htop.
-apt-get -y install tmux vim zsh git-core htop
+apt-get -yq install tmux vim zsh htop
 
 # Install ElasticSearch.
 wget -nv https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/$ES_VERSION/elasticsearch-$ES_VERSION.deb
