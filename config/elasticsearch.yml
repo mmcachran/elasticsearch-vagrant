@@ -17,6 +17,22 @@ script.indexed: on
 script.engine.groovy.inline.search: on
 # script.disable_dynamic: false
 
+# Node names are generated dynamically on startup, so you're relieved
+# from configuring them manually. You can tie this node to a specific name:
+#
+node.name: "thor"
+
+# Every node can be configured to allow or deny being eligible as the master,
+# and to allow or deny to store the data.
+#
+# Allow this node to be eligible as a master node (enabled by default):
+#
+node.master: true
+#
+# Allow this node to store data (enabled by default):
+#
+node.data: true
+
 # Set the address other nodes will use to communicate with this node. If not
 # set, it is automatically derived. It must point to an actual IP address.
 #
@@ -69,17 +85,17 @@ http.port: 9200
 
 # Set the number of shards (splits) of an index (5 by default):
 #
-index.number_of_shards: 5
+# index.number_of_shards: 5
 
 # Set the number of replicas (additional copies) of an index (1 by default):
 #
-index.number_of_replicas: 2
+# index.number_of_replicas: 2
 
 # Note, that for development on a local machine, with small indices, it usually
 # makes sense to "disable" the distributed features:
 #
-# index.number_of_shards: 1
-# index.number_of_replicas: 0
+#index.number_of_shards: 1
+#index.number_of_replicas: 0
 
 # These settings directly affect the performance of index and search operations
 # in your cluster. Assuming you have enough machines to hold shards and
@@ -247,5 +263,5 @@ index.number_of_replicas: 2
 #monitor.jvm.gc.old.info: 5s
 #monitor.jvm.gc.old.debug: 2s
 
-marvel.agent.enabled: true
-marvel.agent.exporter.es.hosts: ["10.0.0.11:9200"]
+# marvel.agent.enabled: true
+# marvel.agent.exporter.es.hosts: ["10.0.0.11:9200"]
