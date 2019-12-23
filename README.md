@@ -10,6 +10,9 @@ Once those are installed:
 * `vagrant up` in the root of this repository
 * Visit `http://10.0.0.11:9200` in your browser
 
+## Elasticsearch
+*Version:* 7.5.1
+
 ## Included plugins
 
 This configuration includes the following plugins:
