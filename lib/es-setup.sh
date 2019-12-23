@@ -13,8 +13,14 @@ sudo update-alternatives --set java /usr/lib/jvm/java-7-openjdk-i386/jre/bin/jav
 sudo apt-get -yq install tmux vim git-core zsh htop
 
 # Install ElasticSearch.
-wget -nv "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$ES_VERSION-amd64.deb"
-sudo dpkg -i "elasticsearch-$ES_VERSION-amd64.deb"
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.5.list
+sudo apt-get update && sudo apt-get install elasticsearch
+
+
+# wget -nv "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$ES_VERSION-amd64.deb"
+# sudo dpkg -i "elasticsearch-$ES_VERSION-amd64.deb"
 
 chmod g+ws /etc/elasticsearch/
 mv /etc/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml.bak
