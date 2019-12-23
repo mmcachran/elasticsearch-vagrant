@@ -3,8 +3,8 @@
 
 Vagrant.configure("2") do |config|
 
-	config.vm.box = "precise32"
-	config.vm.box_url = "https://vagrantcloud.com/hashicorp/boxes/precise32/versions/1.0.0/providers/virtualbox.box"
+	config.vm.box = "hashicorp/precise64"
+	config.vm.box_version = "1.0.0"
 
 	# Set the box IP address.
 	box_ip = '10.0.0.11'
