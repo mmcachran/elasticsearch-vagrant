@@ -25,5 +25,5 @@ cp /home/vagrant/config/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 # Install Kibana.
 # sudo apt-get update && sudo apt-get install kibana
 
-/etc/init.d/elasticsearch restart
+# /etc/init.d/elasticsearch restart
 # or service elasticsearch restart
